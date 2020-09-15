@@ -3,9 +3,9 @@ import React from 'react';
 import Header from './components/header/Header';
 import Content from './components/content/Content';
 
-import './App.css';
+import './CurriculumApp.css';
 
-function App() {
+function CurriculumApp() {
   return (
     <div className="App">
       <div>
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default CurriculumApp;

@@ -30,9 +30,11 @@ const PersonalData = () => {
                             <h3>Edad:</h3>   
                             <p>{ personalData.age }</p>
                         </div>
+                        <hr />
                         <div className="personalData-row"> 
                             <p>{ personalData.about }</p>
                         </div>
+                        <hr />
                         <div className="personalData-block">
                             <h3>Competencias:</h3>
                             <ul className="list" >

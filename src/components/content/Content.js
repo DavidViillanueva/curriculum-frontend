@@ -6,6 +6,7 @@ import Tab from '@material-ui/core/Tab';
 import TabPanel from './components/TabPanel';
 import PersonalData from './components/PersonalData';
 import AcademicData from './components/AcademicData';
+import ContactData from './components/ContactData';
 
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
@@ -52,7 +53,7 @@ const Content = () => {
             </TabPanel>
 
             <TabPanel value={value} index={2} align="right" className="tab-panel">
-                <p>tab3</p>
+                <ContactData />
             </TabPanel>
 
         </div>

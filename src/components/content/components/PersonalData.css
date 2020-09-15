@@ -6,7 +6,7 @@ li{
 }
 
 .data-card{
-    margin-left: 40px;
+    margin: 30px 0px 30px 40px;
     flex-wrap: wrap;
 }
 

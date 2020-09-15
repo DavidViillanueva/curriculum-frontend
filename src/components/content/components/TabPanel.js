@@ -12,7 +12,7 @@ const TabPanel = ({ children, value, index, align, ...other}) => {
             id={`full-width-tabpanel-${index}`}
             aria-labelledby={`full-width-tab-${index}`}
             {...other}
-            className="animate__animated animate__fadeInDown animate__fast"
+            className="animate__animated animate__fadeIn animate__slow"
           >
             {value === index && (
               <Box >
