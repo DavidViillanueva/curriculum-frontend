@@ -1,0 +1,28 @@
+li{
+    float: none;
+    position: relative;
+    right: 0%;
+    margin: 0px;
+}
+
+.data-card{
+    margin-left: 40px;
+    flex-wrap: wrap;
+}
+
+.personalData-row{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 5px 0px 5px 0px;
+}
+
+.personalData-block{
+    margin: 30px 30px 30px 30px;
+    width: auto;
+    display: inline-grid;
+}
+
+.list{
+    list-style: none;
+}

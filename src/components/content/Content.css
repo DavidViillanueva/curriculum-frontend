@@ -1,0 +1,19 @@
+.main-block{
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(235, 235, 235,0.9);
+    padding: 50px 30px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tab-panel{
+    padding: 10px 20px 10px 20px;
+}
+
+.data-card{
+    text-align: inherit;
+}
