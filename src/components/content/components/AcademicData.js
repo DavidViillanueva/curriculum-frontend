@@ -4,25 +4,30 @@ import Studie from './academic/Studie';
 
 import useFetch from '../../../hooks/useFetch';
 
-const AcademicData = () => {
+const AcademicData = React.memo(({ data:studies }) => {
 
-    const {data:studies, loading=true} = useFetch('https://backend-curriculum-ronco.herokuapp.com/academic');
+
+    let loading = true;
+
+    if( studies ) {
+        loading = false;
+    }
 
 
     return (
         <>
-                {loading &&
-                    <div>
-                        <p>Loading...</p>
-                    </div>
-                }
-                {!loading &&
-                    studies.map( (studie) => 
-                        <Studie studie={ studie } key={ studie.title } />
-                    )
-                }
+            {loading &&
+                <div>
+                    <p>Loading...</p>
+                </div>
+            }
+            {!loading &&
+                studies.map( (studie) => 
+                    <Studie studie={ studie } key={ studie.title } />
+                )
+            }
         </>
     )
-}
+})
 
 export default AcademicData;

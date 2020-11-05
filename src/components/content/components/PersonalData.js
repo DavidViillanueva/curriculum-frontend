@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import useFetch from '../../../hooks/useFetch';
+import ContactData from './ContactData';
 
 import './PersonalData.css';
 
-const PersonalData = () => {
+const PersonalData = React.memo( ({data}) => {
 
-    const {data, loading=true} = useFetch('https://backend-curriculum-ronco.herokuapp.com/personal_data');
 
-    let personalData = {}
-    if(data){
-         personalData = data[0];
+    let loading = true;
+    let personalData = {};
+
+    if( data ){
+        personalData = data[0];
+        loading = false;
     }
 
     return (
         <>
-                {loading &&
+                {loading 
+                ?
                     <div>
                         <p>Loading...</p>
                     </div>
-                }
-                {!loading &&
+                :
                     <div className="data-card">
+                        <h2>Informacion personal:</h2>
                         <div className="personalData-row">
                             <h3>Nombre:</h3>   
                             <p>{ personalData.name }</p>
@@ -68,10 +72,10 @@ const PersonalData = () => {
                             }
                             </ul>
                         </div>
-                    </div> 
+                    </div>
                 }
         </>
     )
-}
+})
 
 export default PersonalData;

@@ -14,6 +14,7 @@ import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 
 
 import './Content.css';
+import useFetch from '../../hooks/useFetch';
 
 
 
@@ -25,6 +26,12 @@ const Content = () => {
     const handleChange = ( event, newValue ) => {
         setValue( newValue );
     }
+
+    const {data: personalData,loading:loadingPersonal } = useFetch('https://backend-curriculum-ronco.herokuapp.com/personal_data');
+
+    const { data: contactData, loading: loadingContact} = useFetch('https://backend-curriculum-ronco.herokuapp.com/contact');
+
+    const { data: academicData, loading: loadingAcademic} = useFetch('https://backend-curriculum-ronco.herokuapp.com/academic');
     
     return (
         <div className="main-block">
@@ -45,15 +52,36 @@ const Content = () => {
             </Tabs>
 
             <TabPanel value={value} index={0} align="left" className="tab-panel">
-                <PersonalData />
+                {loadingPersonal 
+                    ?
+                        <p>loading</p>
+                    :
+                        <PersonalData 
+                            data = { personalData }
+                        />
+                }
             </TabPanel>
 
             <TabPanel value={value} index={1} align="center" className="tab-panel">
-                <AcademicData />
+                {loadingPersonal
+                    ?
+                        <p>loading</p>
+                    :
+                        <AcademicData 
+                            data = { academicData }
+                        />
+                }
             </TabPanel>
 
             <TabPanel value={value} index={2} align="right" className="tab-panel">
-                <ContactData />
+                {loadingContact
+                    ?
+                        <p>loading</p>
+                    :
+                        <ContactData 
+                            data = { contactData }
+                        />
+                }
             </TabPanel>
 
         </div>

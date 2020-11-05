@@ -5,16 +5,16 @@ import useFetch from '../../../hooks/useFetch';
 
 import './ContactData.css';
 
-const ContactData = () => {
+const ContactData = React.memo(({ data }) => {
 
     let email,phone,mailto = '';
+    let loading = true;
 
-    const { data, loading = true } = useFetch('https://backend-curriculum-ronco.herokuapp.com/contact');
     if( data ){
-        console.log(data[0]);
         email = data[0].email;
         phone = data[0].cel;
         mailto = `mailto:${email}`;
+        loading = false;
     }
     return (
         <>
@@ -36,8 +36,9 @@ const ContactData = () => {
                     </div>
                 </div>
             }
+            
         </>
     )
-}
+})
 
 export default ContactData;
