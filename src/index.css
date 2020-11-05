@@ -1,12 +1,7 @@
-
-
 body {
-  background: #2193b0 no-repeat fixed;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0) no-repeat fixed;  
-  background: linear-gradient(to bottom, #6dd5ed, #2193b0) no-repeat fixed;
-  
-  
-  font-family: 'Kumbh Sans', sans-serif;
+	background: #2193b0 no-repeat fixed; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0) no-repeat fixed;
+	background: linear-gradient(to bottom, #6dd5ed, #2193b0) no-repeat fixed;
+
+	font-family: 'Kumbh Sans', sans-serif;
 }
-
-

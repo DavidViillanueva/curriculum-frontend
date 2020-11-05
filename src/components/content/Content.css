@@ -1,29 +1,27 @@
-.main-block{
-    position: relative;
-    margin: 20px 50px 20px 50px;
-    background-color: rgba(235, 235, 235,0.9);
-    padding: 50px 30px 50px;
-    border-radius: 10px;
-    text-align: center;
+.main-block {
+	position: relative;
+	margin: 20px 50px 20px 50px;
+	background-color: rgba(235, 235, 235, 0.9);
+	padding: 50px 30px 50px;
+	border-radius: 10px;
+	text-align: center;
 }
 
-.tab-panel{
-    padding: 10px 20px 10px 20px;
+.tab-panel {
+	padding: 10px 20px 10px 20px;
 }
 
-.data-card{
-    text-align: inherit;
+.data-card {
+	text-align: inherit;
 }
 
 @media only screen and (max-width: 700px) {
-    
-    .main-block{
-        margin: 7px 2px 7px 2px;
-        padding: 10px 5px 10px 5px;
-    }
+	.main-block {
+		margin: 7px 2px 7px 2px;
+		padding: 10px 5px 10px 5px;
+	}
 
-    .tab-panel{
-        padding: 0px;
-    }
-
+	.tab-panel {
+		padding: 0px;
+	}
 }

@@ -1,29 +1,28 @@
-.logo-container{
-    background:rgba(42,42,46,1);
-    border-radius: 50%;
-    display: grid;
-    height: 170px;
-    position: relative;
-    left: calc(50% - 85px);
-    width: 170px;
+.logo-container {
+	background: rgba(42, 42, 46, 1);
+	border-radius: 50%;
+	display: grid;
+	height: 170px;
+	position: relative;
+	left: calc(50% - 85px);
+	width: 170px;
 }
 
-.logo-container img{
-    top: 50%;
-    left: 50%;
-    background: rgba(42,42,46,1);
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    position: relative;
-    width: 95%;
-    height: 95%;
+.logo-container img {
+	top: 50%;
+	left: 50%;
+	background: rgba(42, 42, 46, 1);
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	position: relative;
+	width: 95%;
+	height: 95%;
 }
 
-.loader{
-
-    color: wheat;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
+.loader {
+	color: wheat;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
 }

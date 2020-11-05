@@ -1,51 +1,48 @@
 nav {
-    height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */ 
-    margin: 0 auto; /* Centro el contenedor */
-    overflow: hidden;
-    
-    
+	height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */
+	margin: 0 auto; /* Centro el contenedor */
+	overflow: hidden;
 }
-nav ul{
-    float: left;
-    list-style-type: none; /* Elimino los estilos de lista */
-    padding: 0; 
-    position: relative; 
-    left: 50%;
+nav ul {
+	float: left;
+	list-style-type: none; /* Elimino los estilos de lista */
+	padding: 0;
+	position: relative;
+	left: 50%;
 }
 
-.item-menu{
-    float: left; /* Floto los li para que se dispongan horizontalmente */
-    position: relative; 
-    height: 30px;
-    right: 50%;
-    
+.item-menu {
+	float: left; /* Floto los li para que se dispongan horizontalmente */
+	position: relative;
+	height: 30px;
+	right: 50%;
 }
-.item-menu input{
-    width: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #2193b0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px; 
+.item-menu input {
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #2193b0;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
 
-    /* box-shadow:2px 2px 2px rgba(0, 0, 0, 0.2); */
+	/* box-shadow:2px 2px 2px rgba(0, 0, 0, 0.2); */
 
-    align-content: center;
+	align-content: center;
 
-    transition: transform .2s;
+	transition: transform 0.2s;
 }
 
-.item-menu input:hover{
-    background: #21b0a9;
-    cursor: pointer;
+.item-menu input:hover {
+	background: #21b0a9;
+	cursor: pointer;
 
-    -webkit-transform:scale(1.1);
-    -moz-transform:scale(1.1);
-    -ms-transform:scale(1.1);
-    -o-transform:scale(1.1);
-    transform:scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
 }

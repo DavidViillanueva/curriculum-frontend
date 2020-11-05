@@ -4,8 +4,8 @@ import './index.css';
 import CurriculumApp from './CurriculumApp';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CurriculumApp />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<CurriculumApp />
+	</React.StrictMode>,
+	document.getElementById('root')
 );
