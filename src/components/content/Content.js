@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
+import useFetch from '../../hooks/useFetch';
+
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import TabPanel from './components/TabPanel';
-import PersonalData from './components/PersonalData';
-import AcademicData from './components/AcademicData';
-import ContactData from './components/ContactData';
+import PersonalData from './components/personal/PersonalData';
+import AcademicData from './components/academic/AcademicData';
+import Portfolio from './components/portfolio/Portfolio';
 
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
-import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import BusinessCenter from '@material-ui/icons/BusinessCenter';
 
 import './Content.css';
-import useFetch from '../../hooks/useFetch';
 
 const Content = () => {
 	const [value, setValue] = useState(0);
@@ -25,7 +26,7 @@ const Content = () => {
 		'https://backend-curriculum-ronco.herokuapp.com/personal_data'
 	);
 
-	const { data: contactData, loading: loadingContact } = useFetch(
+	const { data: contactData } = useFetch(
 		'https://backend-curriculum-ronco.herokuapp.com/contact'
 	);
 
@@ -46,20 +47,23 @@ const Content = () => {
 				<Tab icon={<AccountCircleOutlinedIcon />} aria-label="Personal Data"></Tab>
 
 				<Tab icon={<LibraryBooksOutlinedIcon />} aria-label="Academic" />
-				<Tab icon={<EmailOutlinedIcon />} aria-label="Contact Data" />
+
+				<Tab icon={<BusinessCenter />} aria-label="Portfolio" />
+
 			</Tabs>
 
 			<TabPanel value={value} index={0} align="left" className="tab-panel">
-				{loadingPersonal ? <p>loading</p> : <PersonalData data={personalData} />}
+				{loadingPersonal ? <p>loading</p> : <PersonalData data={personalData} contactData={contactData} />}
 			</TabPanel>
 
 			<TabPanel value={value} index={1} align="center" className="tab-panel">
-				{loadingPersonal ? <p>loading</p> : <AcademicData data={academicData} />}
+				{loadingAcademic ? <p>loading</p> : <AcademicData data={academicData} />}
 			</TabPanel>
 
-			<TabPanel value={value} index={2} align="right" className="tab-panel">
-				{loadingContact ? <p>loading</p> : <ContactData data={contactData} />}
+			<TabPanel value={value} index={2} align="center" className="tab-panel">
+				{loadingAcademic ? <p>loading</p> : <Portfolio /> }
 			</TabPanel>
+
 		</div>
 	);
 };
