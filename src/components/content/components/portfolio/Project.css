@@ -1,3 +1,64 @@
 .project-balloon {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border-radius: 100px;
+}
+
+
+.project-balloon img {
+    border-radius: 100%;
+    border: 1px solid rgb(42, 42, 46);
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-balloon img:hover {
+    transform: scale(1.03);
+}
+
+.project-balloon p:hover {
+    cursor: default;
+}
+
+
+.project {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.247);
+
+    justify-content: center;
+    align-items: center;
+
+}
+.show {
+    display: flex;
+}
+
+
+.proyect-block {
+    position: relative;
+    background: rgb(235, 235, 235);
+    max-width: 850px;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.close-block {
+    padding: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }

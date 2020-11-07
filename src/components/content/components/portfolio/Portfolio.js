@@ -1,9 +1,12 @@
 import React from 'react'
+import Project from './Project'
+
+import './Portfolio.css'
 
 const Portfolio = () => {
     return (
-        <div className="data-card">
-            <h1>Portfolio</h1>
+        <div className="portfolio-grid">
+            <Project />
         </div>
     )
 }
