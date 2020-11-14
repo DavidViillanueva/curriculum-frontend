@@ -46,7 +46,7 @@ const Project = () => {
     //     description: 'Project description',
     //     img: 'img url',
     //     repositorie: 'link to github',
-    //     link: 'link to production'
+    //     link: 'link to production null if not'
     // }
 
     return (
@@ -76,7 +76,6 @@ const Project = () => {
 
                         <ProjectScreen
                             index={ project.id }
-                            key={ `screen ${project.id }`}
                             onClose = { onClose } 
                             value={ value }
                             project = { project }

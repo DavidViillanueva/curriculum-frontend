@@ -29,9 +29,29 @@ const ProjectScreen = ({
                 </div>
                 
                 <h1>{ project.title }</h1>
+                
+                <img
+                    src="https://pbs.twimg.com/profile_banners/2768311879/1508533275/1500x500"
+                    alt="project"
+                />
 
                 <p>{ project.description }</p>
+                
+                <div className="links-block">
+                    <a 
+                        className="button"
+                        href="#"
+                    >
+                        repo
+                    </a>
 
+                    <a
+                        className="button"
+                        href="#"
+                    >
+                        deploid
+                    </a>
+                </div>
             
             </div>
         </div>
