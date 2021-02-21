@@ -11,7 +11,6 @@ import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined'
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 
-import './Content.css';
 import useFetch from '../../hooks/useFetch';
 
 const Content = () => {
@@ -34,7 +33,7 @@ const Content = () => {
 	);
 
 	return (
-		<div className="main-block">
+		<div className="content__main-block">
 			<Tabs
 				value={value}
 				onChange={handleChange}
@@ -49,15 +48,15 @@ const Content = () => {
 				<Tab icon={<EmailOutlinedIcon />} aria-label="Contact Data" />
 			</Tabs>
 
-			<TabPanel value={value} index={0} align="left" className="tab-panel">
+			<TabPanel value={value} index={0} align="left" className="content__tab-panel">
 				{loadingPersonal ? <p>loading</p> : <PersonalData data={personalData} />}
 			</TabPanel>
 
-			<TabPanel value={value} index={1} align="center" className="tab-panel">
+			<TabPanel value={value} index={1} align="center" className="content__tab-panel">
 				{loadingPersonal ? <p>loading</p> : <AcademicData data={academicData} />}
 			</TabPanel>
 
-			<TabPanel value={value} index={2} align="right" className="tab-panel">
+			<TabPanel value={value} index={2} align="right" className="content__tab-panel">
 				{loadingContact ? <p>loading</p> : <ContactData data={contactData} />}
 			</TabPanel>
 		</div>

@@ -2,8 +2,6 @@ import React from 'react';
 
 import Studie from './academic/Studie';
 
-import useFetch from '../../../hooks/useFetch';
-
 const AcademicData = React.memo(({ data: studies }) => {
 	let loading = true;
 

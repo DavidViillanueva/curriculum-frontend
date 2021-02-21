@@ -1,4 +1,4 @@
-.main-block {
+.content__main-block {
 	position: relative;
 	margin: 20px 50px 20px 50px;
 	background-color: rgba(235, 235, 235, 0.9);
@@ -7,21 +7,21 @@
 	text-align: center;
 }
 
-.tab-panel {
+.content__tab-panel {
 	padding: 10px 20px 10px 20px;
 }
 
-.data-card {
+.content__data-card {
 	text-align: inherit;
 }
 
 @media only screen and (max-width: 700px) {
-	.main-block {
+	.content__main-block {
 		margin: 7px 2px 7px 2px;
 		padding: 10px 5px 10px 5px;
 	}
 
-	.tab-panel {
+	.content__tab-panel {
 		padding: 0px;
 	}
 }

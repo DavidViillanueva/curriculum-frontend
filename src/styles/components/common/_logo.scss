@@ -1,4 +1,4 @@
-.logo-container {
+.logo__container {
 	background: rgba(42, 42, 46, 1);
 	border-radius: 50%;
 	display: grid;
@@ -8,7 +8,7 @@
 	width: 170px;
 }
 
-.logo-container img {
+.logo__container img {
 	top: 50%;
 	left: 50%;
 	background: rgba(42, 42, 46, 1);
@@ -19,7 +19,7 @@
 	height: 95%;
 }
 
-.loader {
+.logo__loader {
 	color: wheat;
 	position: absolute;
 	transform: translate(-50%, -50%);

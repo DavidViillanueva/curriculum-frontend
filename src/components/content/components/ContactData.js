@@ -1,9 +1,5 @@
 import React from 'react';
 
-import useFetch from '../../../hooks/useFetch';
-
-import './ContactData.css';
-
 const ContactData = React.memo(({ data }) => {
 	let email,
 		phone,
@@ -24,15 +20,15 @@ const ContactData = React.memo(({ data }) => {
 				</div>
 			)}
 			{!loading && (
-				<div className="contact-data">
-					<div className="contact-row">
+				<div className="contact__data">
+					<div>
 						<h3>Email:</h3>
 						<p>
 							<a href={mailto}>{email}</a>
 						</p>
 					</div>
 					<hr />
-					<div className="contact-row">
+					<div>
 						<h3>Telefono:</h3>
 						<p>{phone}</p>
 					</div>

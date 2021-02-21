@@ -5,8 +5,6 @@ import MenuBar from './components/MenuBar';
 
 import useFetch from '../../hooks/useFetch';
 
-import './header.css';
-
 const Header = () => {
 	const [menu, setMenu] = useState({
 		Linkedin: 'url1',
