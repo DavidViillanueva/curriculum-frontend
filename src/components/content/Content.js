@@ -12,6 +12,7 @@ import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 
 import useFetch from '../../hooks/useFetch';
+import Loader from '../common/Loader';
 
 const Content = () => {
 	const [value, setValue] = useState(0);
@@ -42,23 +43,28 @@ const Content = () => {
 				textColor="primary"
 				aria-label="icon tabs example"
 			>
-				<Tab icon={<AccountCircleOutlinedIcon />} aria-label="Personal Data"></Tab>
-
-				<Tab icon={<LibraryBooksOutlinedIcon />} aria-label="Academic" />
-				<Tab icon={<EmailOutlinedIcon />} aria-label="Contact Data" />
+				<Tab label="Personal" icon={<AccountCircleOutlinedIcon />} aria-label="Personal Data"></Tab>
+				<Tab label="Estudios" icon={<LibraryBooksOutlinedIcon />} aria-label="Academic" />
+				<Tab label="Contacto" icon={<EmailOutlinedIcon />} aria-label="Contact Data" />
 			</Tabs>
 
-			<TabPanel value={value} index={0} align="left" className="content__tab-panel">
-				{loadingPersonal ? <p>loading</p> : <PersonalData data={personalData} />}
-			</TabPanel>
+			{(loadingPersonal && loadingContact && loadingAcademic) 
+				?
+					<Loader active={ true } />
+				:<>
+					<TabPanel value={value} index={0} align="left" className="content__tab-panel">
+						<PersonalData data={personalData} />
+					</TabPanel>
 
-			<TabPanel value={value} index={1} align="center" className="content__tab-panel">
-				{loadingPersonal ? <p>loading</p> : <AcademicData data={academicData} />}
-			</TabPanel>
+					<TabPanel value={value} index={1} align="center" className="content__tab-panel">
+						<AcademicData data={academicData} />
+					</TabPanel>
 
-			<TabPanel value={value} index={2} align="right" className="content__tab-panel">
-				{loadingContact ? <p>loading</p> : <ContactData data={contactData} />}
-			</TabPanel>
+					<TabPanel value={value} index={2} align="right" className="content__tab-panel">
+						<ContactData data={contactData} />
+					</TabPanel>
+				</>
+			}
 		</div>
 	);
 };
