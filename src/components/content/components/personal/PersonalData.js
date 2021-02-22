@@ -1,7 +1,5 @@
 import React from 'react';
-import ContactData from '../contact/ContactData';
 
-import './PersonalData.css';
 
 const PersonalData = ({ data, contactData }) => {
 	let personalData = {};
@@ -11,48 +9,45 @@ const PersonalData = ({ data, contactData }) => {
 	}
 
 	return (
-		<div className="data-card">
+		<div className="personal__data-card">
 			<h2>Informacion personal:</h2>
-			<div className="personalData-row">
+			<div className="personal__personalData-row">
 				<h3>Nombre:</h3>
 				<p>{personalData.name}</p>
 			</div>
-			<div className="personalData-row">
+			<div className="personal__personalData-row">
 				<h3>Edad:</h3>
 				<p>{personalData.age}</p>
 			</div>
 			<hr />
-			<div className="personalData-row">
+			<div className="personal__personalData-row">
 				<p>{personalData.about}</p>
 			</div>
 			<hr />
-			<div className="personalData-block">
+			<div className="personal__personalData-block">
 				<h3>Competencias:</h3>
-				<ul className="list">
+				<ul className="personal__list">
 					{personalData.skills.map(skill => (
 						<li key={skill}>{skill}</li>
 					))}
 				</ul>
 			</div>
-			<div className="personalData-block">
+			<div className="personal__personalData-block">
 				<h3>Idiomas:</h3>
-				<ul className="list">
+				<ul className="personal__list">
 					{personalData.languages.map(language => (
 						<li key={language}>{language}</li>
 					))}
 				</ul>
 			</div>
-			<div className="personalData-block">
+			<div className="personal__personalData-block">
 				<h3>Herramientas:</h3>
-				<ul className="list">
+				<ul className="personal__list">
 					{personalData.tools.map(tool => (
 						<li key={tool}>{tool}</li>
 					))}
 				</ul>
 			</div>
-			
-			<h2>Contacto:</h2>
-			<ContactData data={contactData} />
 		</div>
 	);
 };

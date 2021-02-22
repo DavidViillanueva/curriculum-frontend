@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './ContactData.css';
 
 const ContactData = ({ data }) => {
 	let email,
@@ -13,15 +12,15 @@ const ContactData = ({ data }) => {
 		mailto = `mailto:${email}`;
 	}
 	return (
-		<div className="contact-data">
-			<div className="contact-row">
+		<div className="contact__data">
+			<div>
 				<h3>Email:</h3>
 				<p>
 					<a href={mailto}>{email}</a>
 				</p>
 			</div>
 			<hr />
-			<div className="contact-row">
+			<div>
 				<h3>Telefono:</h3>
 				<p>{phone}</p>
 			</div>
