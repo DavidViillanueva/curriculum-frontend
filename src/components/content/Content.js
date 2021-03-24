@@ -55,7 +55,7 @@ const Content = () => {
 					<Loader active={ true } />
 				:<>
 					<TabPanel value={value} index={0} align="left" className="content__tab-panel">
-						<PersonalData data={personalData} />
+						{loadingPersonal? <p>Loading</p> : <PersonalData data={personalData} /> }
 					</TabPanel>
 
 					<TabPanel value={value} index={1} align="center" className="content__tab-panel">

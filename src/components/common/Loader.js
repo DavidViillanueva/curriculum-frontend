@@ -8,9 +8,11 @@ const Loader = ({ active }) => {
     const loading = active;
 
     return (
-        <Backdrop open = { loading } >
-            <CircularProgress color="inherit" />
-        </Backdrop>
+        <div className="loader__container">
+            <Backdrop open = { loading } >
+                <CircularProgress color="inherit" />
+            </Backdrop>
+        </div>
     )
 }
 
