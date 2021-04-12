@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const PersonalData = ({ data, contactData }) => {
 	let personalData = {};
 
@@ -10,13 +9,12 @@ const PersonalData = ({ data, contactData }) => {
 
 	return (
 		<div className="personal__data-card">
-			<h2>Informacion personal:</h2>
 			<div className="personal__personalData-row">
-				<h3>Nombre:</h3>
+				<label>Nombre:</label>
 				<p>{personalData.name}</p>
 			</div>
 			<div className="personal__personalData-row">
-				<h3>Edad:</h3>
+				<label>Edad:</label>
 				<p>{personalData.age}</p>
 			</div>
 			<hr />
@@ -25,7 +23,7 @@ const PersonalData = ({ data, contactData }) => {
 			</div>
 			<hr />
 			<div className="personal__personalData-block">
-				<h3>Competencias:</h3>
+				<label>Competencias:</label>
 				<ul className="personal__list">
 					{personalData.skills.map(skill => (
 						<li key={skill}>{skill}</li>
@@ -33,7 +31,7 @@ const PersonalData = ({ data, contactData }) => {
 				</ul>
 			</div>
 			<div className="personal__personalData-block">
-				<h3>Idiomas:</h3>
+				<label>Idiomas:</label>
 				<ul className="personal__list">
 					{personalData.languages.map(language => (
 						<li key={language}>{language}</li>
@@ -41,7 +39,7 @@ const PersonalData = ({ data, contactData }) => {
 				</ul>
 			</div>
 			<div className="personal__personalData-block">
-				<h3>Herramientas:</h3>
+				<label>Herramientas:</label>
 				<ul className="personal__list">
 					{personalData.tools.map(tool => (
 						<li key={tool}>{tool}</li>

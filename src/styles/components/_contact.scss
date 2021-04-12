@@ -19,7 +19,6 @@
 	width: 100%;
 	padding: 10px;
 
-
 	height: 150px;
 	font: inherit;
 
@@ -29,16 +28,16 @@
 }
 
 .contact__form label {
-    display: block;
+	display: block;
 	align-items: flex-end;
-    text-align: right;
-    color: $font-color;
-    font-size: .875em;
+	text-align: right;
+	color: $font-color;
+	font-size: 0.875em;
 	margin-bottom: 10px;
 }
-.contact__text-input{
-	overflow: hidden;  
-	margin-bottom: .875em;
+.contact__text-input {
+	overflow: hidden;
+	margin-bottom: 0.875em;
 	width: 80%;
 	text-align: right;
 }
@@ -49,7 +48,7 @@
 	border: none;
 	padding: 0 0 12px;
 	font-size: 1.2em;
-    font-weight: 400;
+	font-weight: 400;
 	color: $font-color;
 	border-bottom: 1px solid $primary;
 	font-size: large;
@@ -57,23 +56,23 @@
 	&:focus {
 		outline: none;
 	}
-	&:focus + .contact__separator{
+	&:focus + .contact__separator {
 		outline: none;
-		transform: scaleX(1) translateY(-2px);   
+		transform: scaleX(1) translateY(-2px);
 		opacity: 1;
 	}
 }
 
 .contact__separator {
-	height:1px;
+	height: 1px;
 	width: 100%;
 	background: $primary;
 	display: block;
 	transform: scaleX(0) translateY(-2px);
 	transform-origin: 50%;
 	opacity: 0;
-	transition: all .15s linear;
-  }
+	transition: all 0.15s linear;
+}
 
 .contact__button {
 	width: 100px;

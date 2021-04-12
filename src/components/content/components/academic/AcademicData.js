@@ -5,10 +5,9 @@ import Studie from './Studie';
 const AcademicData = ({ data: studies }) => {
 	return (
 		<>
-			{ 
-				studies.map( studie => 
-					<Studie studie={studie} key={studie.title} />) 
-			}
+			{studies.map(studie => (
+				<Studie studie={studie} key={studie.title} />
+			))}
 		</>
 	);
 };

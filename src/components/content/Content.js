@@ -13,7 +13,6 @@ import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined'
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
-
 import Loader from '../common/Loader';
 
 const Content = () => {
@@ -23,17 +22,9 @@ const Content = () => {
 		setValue(newValue);
 	};
 
-	const { data: personalData, loading: loadingPersonal } = useFetch(
-		'https://backend-curriculum-ronco.herokuapp.com/personal_data'
-	);
+	const { data: personalData, loading: loadingPersonal } = useFetch(`${process.env.REACT_APP_BACK}/personal_data`);
 
-	const { data: contactData, loading: loadingContact } = useFetch(
-		'https://backend-curriculum-ronco.herokuapp.com/contact'
-	);
-
-	const { data: academicData, loading: loadingAcademic } = useFetch(
-		'https://backend-curriculum-ronco.herokuapp.com/academic'
-	);
+	const { data: academicData, loading: loadingAcademic } = useFetch(`${process.env.REACT_APP_BACK}/academic`);
 
 	return (
 		<div className="content__main-block">
@@ -50,12 +41,12 @@ const Content = () => {
 				<Tab label="Contacto" icon={<MailOutlineIcon />} aria-label="Contact Data" />
 			</Tabs>
 
-			{(loadingPersonal && loadingContact && loadingAcademic) 
-				?
-					<Loader active={ true } />
-				:<>
+			{loadingPersonal && loadingAcademic ? (
+				<Loader active={true} />
+			) : (
+				<>
 					<TabPanel value={value} index={0} align="left" className="content__tab-panel">
-						{loadingPersonal? <p>Loading</p> : <PersonalData data={personalData} /> }
+						{loadingPersonal ? <p>Loading</p> : <PersonalData data={personalData} />}
 					</TabPanel>
 
 					<TabPanel value={value} index={1} align="center" className="content__tab-panel">
@@ -63,10 +54,10 @@ const Content = () => {
 					</TabPanel>
 
 					<TabPanel value={value} index={2} align="right" className="content__tab-panel">
-						<ContactData data={contactData} />
+						<ContactData />
 					</TabPanel>
 				</>
-			}
+			)}
 		</div>
 	);
 };
