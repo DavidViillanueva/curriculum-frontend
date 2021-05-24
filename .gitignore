@@ -20,3 +20,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.dockerignore
+docker*
+Docker*
+generate_config_js.sh

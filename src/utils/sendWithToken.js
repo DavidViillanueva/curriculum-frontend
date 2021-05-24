@@ -14,12 +14,15 @@ export const sendWithToken = (data, endpoint) => {
 		method: 'POST',
 		headers: {
 			'Content-type': 'application/json',
-			authorization: process.env.REACT_APP_API_KEY,
+			// authorization: process.env.REACT_APP_API_KEY,
+			authorization: window.REACT_APP_API_KEY,
 		},
 		body: JSON.stringify(data),
 	};
 
 	const url = `${process.env.REACT_APP_BACK}/${endpoint}`;
+	// const url = `${window.REACT_APP_BACK}/${endpoint}`;
+	//
 
 	fetch(url, requestOptions)
 		.then(response => Swal.fire('Enviado!', '', 'success'))

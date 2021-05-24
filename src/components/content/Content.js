@@ -23,8 +23,11 @@ const Content = () => {
 	};
 
 	const { data: personalData, loading: loadingPersonal } = useFetch(`${process.env.REACT_APP_BACK}/personal_data`);
+	// const { data: personalData, loading: loadingPersonal } = useFetch(`${window.REACT_APP_BACK}/personal_data`);
 
 	const { data: academicData, loading: loadingAcademic } = useFetch(`${process.env.REACT_APP_BACK}/academic`);
+	const { data: jobsData } = useFetch(`${process.env.REACT_APP_BACK}/jobs`);
+	// const { data: academicData, loading: loadingAcademic } = useFetch(`${window.REACT_APP_BACK}/academic`);
 
 	return (
 		<div className="content__main-block">
@@ -37,7 +40,7 @@ const Content = () => {
 				aria-label="icon tabs example"
 			>
 				<Tab label="Personal" icon={<AccountCircleOutlinedIcon />} aria-label="Personal Data"></Tab>
-				<Tab label="Estudios" icon={<LibraryBooksOutlinedIcon />} aria-label="Academic" />
+				<Tab label="Estudios / Laboral" icon={<LibraryBooksOutlinedIcon />} aria-label="Academic" />
 				<Tab label="Contacto" icon={<MailOutlineIcon />} aria-label="Contact Data" />
 			</Tabs>
 
@@ -50,7 +53,7 @@ const Content = () => {
 					</TabPanel>
 
 					<TabPanel value={value} index={1} align="center" className="content__tab-panel">
-						<AcademicData data={academicData} />
+						<AcademicData data={academicData} jobData={jobsData} />
 					</TabPanel>
 
 					<TabPanel value={value} index={2} align="right" className="content__tab-panel">

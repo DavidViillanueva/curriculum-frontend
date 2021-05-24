@@ -30,7 +30,7 @@ const Header = () => {
 	}, [linkedin, github]);
 
 	return (
-		<header>
+		<header className="header__container">
 			<Logo url={profilePicture} />
 			<MenuBar menuItems={menu} />
 		</header>
