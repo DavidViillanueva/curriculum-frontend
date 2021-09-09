@@ -33,7 +33,6 @@ const ContactData = ({ data }) => {
 	};
 
 	const validate = () => {
-		console.log('validate');
 
 		if (!validator.isEmail(remitentEmail)) {
 			setError('No ingreso un mail valido');

@@ -13,7 +13,6 @@ import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined'
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
-import Loader from '../common/Loader';
 
 const Content = () => {
 	const [value, setValue] = useState(0);
@@ -25,7 +24,7 @@ const Content = () => {
 	const { data: personalData, loading: loadingPersonal } = useFetch(`${process.env.REACT_APP_BACK}/personal_data`);
 	// const { data: personalData, loading: loadingPersonal } = useFetch(`${window.REACT_APP_BACK}/personal_data`);
 
-	const { data: academicData, loading: loadingAcademic } = useFetch(`${process.env.REACT_APP_BACK}/academic`);
+	const { data: academicData } = useFetch(`${process.env.REACT_APP_BACK}/academic`);
 	const { data: jobsData } = useFetch(`${process.env.REACT_APP_BACK}/jobs`);
 	// const { data: academicData, loading: loadingAcademic } = useFetch(`${window.REACT_APP_BACK}/academic`);
 
@@ -44,12 +43,15 @@ const Content = () => {
 				<Tab label="Contacto" icon={<MailOutlineIcon />} aria-label="Contact Data" />
 			</Tabs>
 
-			{loadingPersonal && loadingAcademic ? (
-				<Loader active={true} />
-			) : (
+			{(loadingPersonal)
+			?
+				<div className="content__center mt-10">
+					<div className="hex__loader"> </div>
+				</div>
+			:
 				<>
 					<TabPanel value={value} index={0} align="left" className="content__tab-panel">
-						{loadingPersonal ? <p>Loading</p> : <PersonalData data={personalData} />}
+						<PersonalData data={personalData} />
 					</TabPanel>
 
 					<TabPanel value={value} index={1} align="center" className="content__tab-panel">
@@ -60,7 +62,7 @@ const Content = () => {
 						<ContactData />
 					</TabPanel>
 				</>
-			)}
+			}
 		</div>
 	);
 };

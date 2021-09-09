@@ -15,6 +15,11 @@
 	text-align: inherit;
 }
 
+.content__center {
+	display: flex;
+	justify-content: center;
+}
+
 @media only screen and (max-width: 700px) {
 	.content__main-block {
 		margin: 7px 2px 7px 2px;
